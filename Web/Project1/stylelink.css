@@ -1,0 +1,17 @@
+body{
+    background-color: gray;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: rgb(148, 148, 255);
+    text-align: center;
+}
+hr{
+    border: solid green;
+}
+li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: rgba(24, 201, 255, 0.518);
+}
