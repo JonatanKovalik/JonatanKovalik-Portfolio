@@ -8,10 +8,10 @@ This repository is a centralized portfolio showcasing my programming projects an
 
 The projects within this repository are organized into folders by programming language to provide a clear overview of my work. Feel free to explore the code in each directory:
 
-* **[Web](https://github.com/your-username/Projects/tree/main/Web):** Projects showcasing my web development skills with **HTML**, **CSS**, and **JavaScript**, including responsive design and interactive user interfaces.
+* **[Web](https://github.com/JonatanKovalik/Projects/tree/main/Web):** Projects showcasing my web development skills with **HTML**, **CSS**, and **JavaScript**, including responsive design and interactive user interfaces.
 * **[Python](https://github.com/your-username/Projects/tree/main/Python):** Scripts, console applications, and various projects built using Python.
 * **[C#](https://github.com/your-username/Projects/tree/main/C-Sharp):** Applications demonstrating my proficiency in C# and object-oriented programming (OOP).
-* **[C++](https://github.com/your-username/Projects/tree/main/C++):** Projects focused on core programming concepts, algorithms, and data structures.
+* **[C++](https://github.com/JonatanKovalik/Projects/tree/main/C%2B%2B/FirstCodeC%2B%2B):** Projects focused on core programming concepts, algorithms, and data structures.
 * **[Java](https://github.com/your-username/Projects/tree/main/Java):** Applications and exercises that highlight my understanding of Java programming.
 
 *(Note: The links in brackets [ ] will need to be updated to match the names of your folders and your GitHub username once you create them. For now, you can leave them as they are.)*
