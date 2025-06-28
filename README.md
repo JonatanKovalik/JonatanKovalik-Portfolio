@@ -27,6 +27,4 @@ The projects within this repository are organized into folders by programming la
 
 I am always open to new challenges and collaborations. Feel free to reach out and connect!
 
-* **Email:** `your-email@example.com`
-* **LinkedIn:** `[Link to your LinkedIn profile]`
-* **Website (coming soon):** `[Link to your personal website]`
+* **Email:** `jonatan.kovalik@gmail.com`
