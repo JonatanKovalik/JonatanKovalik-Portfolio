@@ -1,5 +1,5 @@
 #This code is base 10 to 2 and 2 to 10!!!
-#Creat by Jonatan Kovalilk!!
+#Created by Jonatan Kovalilk!!
 #05/01/2025
 # ---------------------------------------------------------
 import time
