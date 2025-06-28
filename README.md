@@ -9,10 +9,10 @@ This repository is a centralized portfolio showcasing my programming projects an
 The projects within this repository are organized into folders by programming language to provide a clear overview of my work. Feel free to explore the code in each directory:
 
 * **[Web](https://github.com/JonatanKovalik/Projects/tree/main/Web):** Projects showcasing my web development skills with **HTML**, **CSS**, and **JavaScript**, including responsive design and interactive user interfaces.
-* **[Python](https://github.com/your-username/Projects/tree/main/Python):** Scripts, console applications, and various projects built using Python.
-* **[C#](https://github.com/your-username/Projects/tree/main/C-Sharp):** Applications demonstrating my proficiency in C# and object-oriented programming (OOP).
+* **[Python](https://github.com/JonatanKovalik/Projects/tree/main/Python):** Scripts, console applications, and various projects built using Python.
+* **[C#](https://github.com/JonatanKovalik/Projects/tree/main/C%23):** Applications demonstrating my proficiency in C# and object-oriented programming (OOP).
 * **[C++](https://github.com/JonatanKovalik/Projects/tree/main/C%2B%2B/FirstCodeC%2B%2B):** Projects focused on core programming concepts, algorithms, and data structures.
-* **[Java](https://github.com/your-username/Projects/tree/main/Java):** Applications and exercises that highlight my understanding of Java programming.
+* **[Java](https://github.com/JonatanKovalik/Projects/tree/main/Java):** Applications and exercises that highlight my understanding of Java programming.
     * **Grab the Paper Game:** A dynamic arcade-style game developed with the Processing framework, featuring multiple difficulty levels, a scoring system, an in-game shop with unlockable skins, achievements, and custom music.
     [View Project](https://github.com/JonatanKovalik/Projects/tree/main/Grabthepaperproject)
 
