@@ -16,8 +16,6 @@ The projects within this repository are organized into folders by programming la
     * **Grab the Paper Game:** A dynamic arcade-style game developed with the Processing framework, featuring multiple difficulty levels, a scoring system, an in-game shop with unlockable skins, achievements, and custom music.
     [View Project](https://github.com/JonatanKovalik/Projects/tree/main/Grabthepaperproject)
 
-*(Note: The links in brackets [ ] will need to be updated to match the names of your folders and your GitHub username once you create them. For now, you can leave them as they are.)*
-
 ### Skills & Technologies
 
 * **Programming Languages:** JavaScript, Python, C#, Java, C++
