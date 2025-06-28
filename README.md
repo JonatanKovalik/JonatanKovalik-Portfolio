@@ -13,6 +13,8 @@ The projects within this repository are organized into folders by programming la
 * **[C#](https://github.com/your-username/Projects/tree/main/C-Sharp):** Applications demonstrating my proficiency in C# and object-oriented programming (OOP).
 * **[C++](https://github.com/JonatanKovalik/Projects/tree/main/C%2B%2B/FirstCodeC%2B%2B):** Projects focused on core programming concepts, algorithms, and data structures.
 * **[Java](https://github.com/your-username/Projects/tree/main/Java):** Applications and exercises that highlight my understanding of Java programming.
+    * **Grab the Paper Game:** A dynamic arcade-style game developed with the Processing framework, featuring multiple difficulty levels, a scoring system, an in-game shop with unlockable skins, achievements, and custom music.
+    [View Project](https://github.com/JonatanKovalik/Projects/tree/main/Grabthepaperproject)
 
 *(Note: The links in brackets [ ] will need to be updated to match the names of your folders and your GitHub username once you create them. For now, you can leave them as they are.)*
 
