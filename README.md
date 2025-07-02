@@ -1,30 +1,58 @@
-# My Projects Portfolio
+# 🛠️ My Projects Portfolio
 
-👋 **Hello and welcome!**
+👋 **Welcome to My GitHub Portfolio!**
 
-This repository is a centralized portfolio showcasing my programming projects and demonstrating my skills across a variety of languages and technologies. It represents my journey as a self-taught developer and my passion for building robust and functional applications.
+This repository is a collection of all my programming projects so far. Each project represents a step in my journey as a self-taught developer — from my earliest experiments to more advanced applications. All code here is provided as-is, for learning and inspiration.
 
-### Projects by Language
+---
 
-The projects within this repository are organized into folders by programming language to provide a clear overview of my work. Feel free to explore the code in each directory:
+## 📂 Project Organization
 
-* **[Web](https://github.com/JonatanKovalik/Projects/tree/main/Web):** Projects showcasing my web development skills with **HTML**, **CSS**, and **JavaScript**, including responsive design and interactive user interfaces.
-* **[Python](https://github.com/JonatanKovalik/Projects/tree/main/Python):** Scripts, console applications, and various projects built using Python.
-* **[C#](https://github.com/JonatanKovalik/Projects/tree/main/C%23):** Applications demonstrating my proficiency in C# and object-oriented programming (OOP).
-* **[C++](https://github.com/JonatanKovalik/Projects/tree/main/C%2B%2B/FirstCodeC%2B%2B):** Projects focused on core programming concepts, algorithms, and data structures.
-* **[Java](https://github.com/JonatanKovalik/Projects/tree/main/Java):** Applications and exercises that highlight my understanding of Java programming.
-    * **Grab the Paper Game:** A dynamic arcade-style game developed with the Processing framework, featuring multiple difficulty levels, a scoring system, an in-game shop with unlockable skins, achievements, and custom music.
-    [View Project](https://github.com/JonatanKovalik/Projects/tree/main/Grabthepaperproject)
+Projects are grouped by language or technology:
 
-### Skills & Technologies
+- **Web**  
+  HTML, CSS, and JavaScript projects. Includes simple websites, style experiments, and interactive UI elements.
 
-* **Programming Languages:** JavaScript, Python, C#, Java, C++
-* **Web Technologies:** HTML5, CSS3, Responsive Design
-* **Concepts:** Object-Oriented Programming (OOP), Data Structures, Algorithms, UI/UX Principles
-* **Tools:** Git, GitHub, Visual Studio Code
+- **Python**  
+  Scripts, small apps, and console programs. Includes number converters, GUI experiments, and more.
 
-### Connect with Me
+- **C#**  
+  Projects demonstrating my skills in C#, including Windows Forms apps, authentication systems, and simple games.
 
-I am always open to new challenges and collaborations. Feel free to reach out and connect!
+- **C++**  
+  Algorithmic challenges, games, and utilities. Includes SFML-based games, math tools, and number guessing games.
 
-* **Email:** `jonatan.kovalik@gmail.com`
+- **Java**  
+  Practice projects and small applications, exploring Java fundamentals and OOP.
+
+- **Grab the Paper Game**  
+  An arcade-style game built with Processing (Java) — includes levels, scores, an in-game shop, achievements, and music logic.
+
+> **Note:**  
+> All projects are provided as-is and will remain in their current state.  
+> No images or videos are included in any project.
+
+---
+
+## 💡 Skills & Technologies
+
+- **Languages:** JavaScript, Python, C#, Java, C++
+- **Web:** HTML5, CSS3, Responsive Design, UI/UX basics
+- **Concepts:** OOP, Algorithms, GUIs, Game Logic
+- **Tools:** Git, GitHub, Visual Studio Code, MonoGame, SFML, Tkinter, Processing
+
+---
+
+## 🤝 Looking for Collaborators!
+
+I'm interested in connecting with other developers who want to join me on new (free, non-commercial) programming projects, learn together, or simply share ideas.  
+If you are looking for experience or want to practice with real code — feel free to reach out!
+
+**Contact me:**  
+📧 jonatan.kovalik@gmail.com
+
+---
+
+## ⚖️ License
+
+All code in this repository is licensed under the MIT License — use it freely for learning, experimenting, and sharing.
