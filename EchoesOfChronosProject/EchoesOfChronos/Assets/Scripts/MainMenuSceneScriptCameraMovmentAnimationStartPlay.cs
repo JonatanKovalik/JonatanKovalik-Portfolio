@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Timeline;
+using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
+using UnityEngine.UI;
 
 public class MainMenuSceneScript : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class MainMenuSceneScript : MonoBehaviour
     public Camera Maincamera;
     public PlayableDirector cameradir;
     private bool isplaying = false;
+    public GameObject settings;
+    public GameObject quit;
+    private bool isanimationend = false;
 
     void Start()
     {
@@ -51,9 +55,27 @@ public class MainMenuSceneScript : MonoBehaviour
         if (cameradir != null)
         {
             isplaying = true;
+            if (settings != null)
+            {
+                BoxCollider settingsCollider = settings.GetComponent<BoxCollider>();
+                if (settingsCollider != null)
+                {
+                    settingsCollider.enabled = false;
+                }
+            }
+
+            if (quit != null)
+            {
+                BoxCollider quitCollider = quit.GetComponent<BoxCollider>();
+                if (quitCollider != null)
+                {
+                    quitCollider.enabled = false;
+                }
+            }
             objrender.material = originalmat;
             PlayText.gameObject.SetActive(false);
             cameradir.Play();
+            isanimationend = true;
         }
     }
 
@@ -71,6 +93,9 @@ public class MainMenuSceneScript : MonoBehaviour
 
     void Update()
     {
-
+        if (cameradir.state != PlayState.Playing && isanimationend == true)
+        {
+            SceneManager.LoadScene("LoadinScene");
+        }
     }
 }

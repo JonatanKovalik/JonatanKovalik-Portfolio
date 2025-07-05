@@ -15,7 +15,7 @@ MonoBehaviour:
   timeAreaShownRange: {x: -0.20242915, y: 9.797571}
   trackScale: 1
   playRangeEnabled: 0
-  windowTime: 3.4191325990250334
+  windowTime: 1.014415193349123
   verticalScroll: 0
   sequencerHeaderWidth: 315
   m_TimeAreaPlayRange:

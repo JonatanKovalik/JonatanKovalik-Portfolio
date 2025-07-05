@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 5d8b5580918e8d943b9dcd4f79164848
+  - enabled: 1
     path: Assets/Scenes/LoadinScene.unity
     guid: 2eb34d30f6b2f9f4eb0eac85946497a7
   - enabled: 1
-    path: Assets/Scenes/MainMenuScene.unity
-    guid: 5d8b5580918e8d943b9dcd4f79164848
+    path: Assets/Scenes/QuitScene.unity
+    guid: 4b7170352b62c09419735aa24ce5739e
+  - enabled: 1
+    path: Assets/Scenes/SettingsMenuScene.unity
+    guid: 20b3bf12b4789344cbd3bcc604eca309
   - enabled: 1
     path: Assets/Scenes/GameLevelScenes/Level1_ForestMaze.unity
     guid: 1c9ffb3c495315b4da86296256987cee
