@@ -15,14 +15,14 @@ MonoBehaviour:
   timeAreaShownRange: {x: -0.17386031, y: 9.54493}
   trackScale: 1
   playRangeEnabled: 0
-  windowTime: 0
+  windowTime: 0.7653240000363439
   verticalScroll: 0
   sequencerHeaderWidth: 315
   m_TimeAreaPlayRange:
     start: 0
     end: 0
   m_Keys:
-  - {fileID: 1830026803907394908, guid: 470a7bdef276bd648bac89d2994b282e, type: 2}
+  - {fileID: 5619403580263788010, guid: 470a7bdef276bd648bac89d2994b282e, type: 2}
   m_Vals:
   - collapsed: 0
     showMarkers: 1

@@ -10,12 +10,18 @@ public class SettingsScript : MonoBehaviour
     public Button GraphicsButton;
     public Button ControlsButton;
     public Button GamePlayButton;
+    public Button BackButton;
 
     public GameObject model_human;
     public PlayableDirector cameradir;
     public PlayableDirector cameradir2;
     public PlayableDirector cameradir3;
     public PlayableDirector cameradir4;
+
+    public PlayableDirector cameradirback;
+    public PlayableDirector cameradirback2;
+    public PlayableDirector cameradirback3;
+    public PlayableDirector cameradirback4;
     public Text Title;
 
     private RectTransform audioButtonRectTransform;
@@ -36,8 +42,18 @@ public class SettingsScript : MonoBehaviour
 
     private string currentButtonClicked = "";
 
+    public GameObject AudioPanel;
+    public GameObject GraphicsPanel;
+    public GameObject ControlsPanel;
+    public GameObject GamePlayPanel;
+
     void Start()
     {
+        BackButton.gameObject.SetActive(false);
+        AudioPanel.SetActive(false);
+        GraphicsPanel.SetActive(false);
+        ControlsPanel.SetActive(false);
+        GamePlayPanel.SetActive(false);
         audioButtonRectTransform = AudioButton.GetComponent<RectTransform>();
         graphicsButtonRectTransform = GraphicsButton.GetComponent<RectTransform>();
         controlsButtonRectTransform = ControlsButton.GetComponent<RectTransform>();
@@ -60,6 +76,20 @@ public class SettingsScript : MonoBehaviour
 
         titleRectTransform.anchoredPosition = new Vector2(initialTitleXPosition, titleRectTransform.anchoredPosition.y);
 
+        StartCoroutine(InitialAnimationSequence());
+    }
+
+    IEnumerator InitialAnimationSequence()
+    {
+        SetButtonsInteractable(false);
+        if (cameradir != null)
+        {
+            cameradir.Play();
+            while (cameradir.state == PlayState.Playing)
+            {
+                yield return null;
+            }
+        }
         SetButtonsInteractable(true);
     }
 
@@ -71,7 +101,7 @@ public class SettingsScript : MonoBehaviour
         GamePlayButton.interactable = interactable;
     }
 
-    IEnumerator HandleButtonClickSequence(PlayableDirector nextCameraDirector)
+    IEnumerator HandleButtonClickSequence(PlayableDirector categoryCameraDirector)
     {
         if (isAnimatingUIElements)
         {
@@ -95,28 +125,45 @@ public class SettingsScript : MonoBehaviour
             StartCoroutine(AnimateSingleRectTransformToTarget(rectT));
         }
 
-        if (cameradir != null)
-        {
-            cameradir.Play();
-        }
-
         yield return new WaitForSeconds(animationDuration);
 
-        if (cameradir != null)
+        if (cameradirback != null)
         {
-            while (cameradir.state == PlayState.Playing)
+            cameradirback.Play();
+            while (cameradirback.state == PlayState.Playing)
             {
                 yield return null;
             }
         }
 
-        isAnimatingUIElements = false;
-        yield return StartCoroutine(UpdateTitleAndAnimateBack());
-
-        if (nextCameraDirector != null)
+        if (categoryCameraDirector != null)
         {
-            nextCameraDirector.Play();
+            categoryCameraDirector.Play();
         }
+
+        isAnimatingUIElements = false;
+
+        switch (currentButtonClicked)
+        {
+            case "Audio":
+                Title.text = "Audio Settings";
+                AudioPanel.SetActive(true);
+                break;
+            case "Graphics":
+                Title.text = "Graphics Settings";
+                GraphicsPanel.SetActive(true);
+                break;
+            case "Controls":
+                Title.text = "Controls Settings";
+                ControlsPanel.SetActive(true);
+                break;
+            case "GamePlay":
+                Title.text = "Gameplay Settings";
+                GamePlayPanel.SetActive(true);
+                break;
+        }
+        BackButton.gameObject.SetActive(true);
+        yield return StartCoroutine(AnimateSingleRectTransformToOriginal(titleRectTransform));
 
         SetButtonsInteractable(true);
     }
@@ -138,9 +185,8 @@ public class SettingsScript : MonoBehaviour
         rectTransform.anchoredPosition = targetPos;
     }
 
-    IEnumerator AnimateSingleRectTransformToTargetTextAudio(RectTransform rectTransform)
+    IEnumerator AnimateSingleRectTransformToOriginal(RectTransform rectTransform)
     {
-        isTitleAnimatingBack = true;
         Vector2 startPos = rectTransform.anchoredPosition;
         Vector2 targetPos = new Vector2(defaultXPosition, startPos.y);
 
@@ -154,33 +200,84 @@ public class SettingsScript : MonoBehaviour
             yield return null;
         }
         rectTransform.anchoredPosition = targetPos;
-        isTitleAnimatingBack = false;
     }
 
-    IEnumerator UpdateTitleAndAnimateBack()
+    public void BackButtonClick()
     {
-        while (Mathf.Abs(titleRectTransform.anchoredPosition.x - targetXPosition) > positionTolerance)
+        if (!isTitleAnimatingBack)
         {
-            yield return null;
+            StartCoroutine(HandleBackButtonProcess());
         }
+    }
 
+    private IEnumerator HandleBackButtonProcess()
+    {
+        isTitleAnimatingBack = true;
+        SetButtonsInteractable(false);
+
+        AudioPanel.SetActive(false);
+        GraphicsPanel.SetActive(false);
+        ControlsPanel.SetActive(false);
+        GamePlayPanel.SetActive(false);
+        BackButton.gameObject.SetActive(false);
+
+        PlayableDirector cameraBackSpecificDirector = null;
         switch (currentButtonClicked)
         {
             case "Audio":
-                Title.text = "Audio Settings";
+                cameraBackSpecificDirector = cameradirback2;
                 break;
             case "Graphics":
-                Title.text = "Graphics Settings";
+                cameraBackSpecificDirector = cameradirback3;
                 break;
             case "Controls":
-                Title.text = "Controls Settings";
+                cameraBackSpecificDirector = cameradirback4;
                 break;
             case "GamePlay":
-                Title.text = "Gameplay Settings";
+                cameraBackSpecificDirector = cameradirback;
                 break;
         }
 
-        yield return StartCoroutine(AnimateSingleRectTransformToTargetTextAudio(titleRectTransform));
+        if (cameraBackSpecificDirector != null)
+        {
+            cameraBackSpecificDirector.Play();
+            while (cameraBackSpecificDirector.state == PlayState.Playing)
+            {
+                yield return null;
+            }
+        }
+
+        yield return StartCoroutine(AnimateSingleRectTransformToOriginal(titleRectTransform));
+
+        List<RectTransform> elementsToAnimateBack = new List<RectTransform>()
+        {
+            audioButtonRectTransform,
+            graphicsButtonRectTransform,
+            controlsButtonRectTransform,
+            gamePlayButtonRectTransform
+        };
+
+        foreach (RectTransform rectT in elementsToAnimateBack)
+        {
+            StartCoroutine(AnimateSingleRectTransformToOriginal(rectT));
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        cameradir.Play();
+        Title.text = "Settings";
+        currentButtonClicked = "";
+
+        if (cameradir != null)
+        {
+            while (cameradir.state == PlayState.Playing)
+            {
+                yield return null;
+            }
+        }
+
+        isTitleAnimatingBack = false;
+        SetButtonsInteractable(true);
     }
 
     public void AudioButtonClick()
@@ -221,6 +318,6 @@ public class SettingsScript : MonoBehaviour
 
     public void Update()
     {
-        // This method is now empty as the logic has been moved to coroutines.
+
     }
 }
