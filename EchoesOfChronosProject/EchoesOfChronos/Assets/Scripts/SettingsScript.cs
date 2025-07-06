@@ -13,85 +13,112 @@ public class SettingsScript : MonoBehaviour
 
     public GameObject model_human;
     public PlayableDirector cameradir;
+    public PlayableDirector cameradir2;
+    public PlayableDirector cameradir3;
+    public PlayableDirector cameradir4;
     public Text Title;
+
+    private RectTransform audioButtonRectTransform;
+    private RectTransform graphicsButtonRectTransform;
+    private RectTransform controlsButtonRectTransform;
+    private RectTransform gamePlayButtonRectTransform;
+    private RectTransform titleRectTransform;
 
     private float defaultXPosition = -527f;
     private float initialTitleXPosition = -468f;
-    private float targetXPosition = -1183f;
+    private float targetXPosition = -2183f;
 
     private float animationDuration = 1.3f;
+    private float positionTolerance = 5f;
 
     private bool isAnimatingUIElements = false;
+    private bool isTitleAnimatingBack = false;
+
+    private string currentButtonClicked = "";
 
     void Start()
     {
-        AudioButton.enabled = true;
-        GraphicsButton.enabled = true;
-        ControlsButton.enabled = true;
-        GamePlayButton.enabled = true;
+        audioButtonRectTransform = AudioButton.GetComponent<RectTransform>();
+        graphicsButtonRectTransform = GraphicsButton.GetComponent<RectTransform>();
+        controlsButtonRectTransform = ControlsButton.GetComponent<RectTransform>();
+        gamePlayButtonRectTransform = GamePlayButton.GetComponent<RectTransform>();
+        titleRectTransform = Title.GetComponent<RectTransform>();
 
+        Title.gameObject.SetActive(true);
         AudioButton.gameObject.SetActive(true);
         GraphicsButton.gameObject.SetActive(true);
         ControlsButton.gameObject.SetActive(true);
         GamePlayButton.gameObject.SetActive(true);
 
         model_human.SetActive(true);
-        Title.enabled = true;
+        model_human.transform.position = new Vector3(-9.83f, 1.31f, 8.94f);
 
-        AudioButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(defaultXPosition, AudioButton.GetComponent<RectTransform>().anchoredPosition.y);
-        GraphicsButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(defaultXPosition, GraphicsButton.GetComponent<RectTransform>().anchoredPosition.y);
-        ControlsButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(defaultXPosition, ControlsButton.GetComponent<RectTransform>().anchoredPosition.y);
-        GamePlayButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(defaultXPosition, GamePlayButton.GetComponent<RectTransform>().anchoredPosition.y);
+        audioButtonRectTransform.anchoredPosition = new Vector2(defaultXPosition, audioButtonRectTransform.anchoredPosition.y);
+        graphicsButtonRectTransform.anchoredPosition = new Vector2(defaultXPosition, graphicsButtonRectTransform.anchoredPosition.y);
+        controlsButtonRectTransform.anchoredPosition = new Vector2(defaultXPosition, controlsButtonRectTransform.anchoredPosition.y);
+        gamePlayButtonRectTransform.anchoredPosition = new Vector2(defaultXPosition, gamePlayButtonRectTransform.anchoredPosition.y);
 
-        Title.GetComponent<RectTransform>().anchoredPosition = new Vector2(initialTitleXPosition, Title.GetComponent<RectTransform>().anchoredPosition.y);
+        titleRectTransform.anchoredPosition = new Vector2(initialTitleXPosition, titleRectTransform.anchoredPosition.y);
+
+        SetButtonsInteractable(true);
     }
 
-    private void HandleAnyButtonClick()
+    private void SetButtonsInteractable(bool interactable)
+    {
+        AudioButton.interactable = interactable;
+        GraphicsButton.interactable = interactable;
+        ControlsButton.interactable = interactable;
+        GamePlayButton.interactable = interactable;
+    }
+
+    IEnumerator HandleButtonClickSequence(PlayableDirector nextCameraDirector)
     {
         if (isAnimatingUIElements)
         {
-            return;
+            yield break;
         }
 
-        StopAllCoroutines();
+        isAnimatingUIElements = true;
+        SetButtonsInteractable(false);
 
-        StartCoroutine(AnimateAllUIElementsTogether());
+        List<RectTransform> elementsToAnimate = new List<RectTransform>()
+        {
+            audioButtonRectTransform,
+            graphicsButtonRectTransform,
+            controlsButtonRectTransform,
+            gamePlayButtonRectTransform,
+            titleRectTransform
+        };
+
+        foreach (RectTransform rectT in elementsToAnimate)
+        {
+            StartCoroutine(AnimateSingleRectTransformToTarget(rectT));
+        }
 
         if (cameradir != null)
         {
             cameradir.Play();
         }
-    }
 
-    IEnumerator AnimateAllUIElementsTogether()
-    {
-        isAnimatingUIElements = true;
+        yield return new WaitForSeconds(animationDuration);
 
-        List<RectTransform> elementsToAnimate = new List<RectTransform>()
+        if (cameradir != null)
         {
-            AudioButton.GetComponent<RectTransform>(),
-            GraphicsButton.GetComponent<RectTransform>(),
-            ControlsButton.GetComponent<RectTransform>(),
-            GamePlayButton.GetComponent<RectTransform>(),
-            Title.GetComponent<RectTransform>()
-        };
-
-        List<Coroutine> runningAnimations = new List<Coroutine>();
-
-        foreach (RectTransform rectT in elementsToAnimate)
-        {
-            runningAnimations.Add(StartCoroutine(AnimateSingleRectTransformToTarget(rectT)));
-        }
-
-        foreach (Coroutine anim in runningAnimations)
-        {
-            if (anim != null)
+            while (cameradir.state == PlayState.Playing)
             {
-                yield return anim;
+                yield return null;
             }
         }
 
         isAnimatingUIElements = false;
+        yield return StartCoroutine(UpdateTitleAndAnimateBack());
+
+        if (nextCameraDirector != null)
+        {
+            nextCameraDirector.Play();
+        }
+
+        SetButtonsInteractable(true);
     }
 
     IEnumerator AnimateSingleRectTransformToTarget(RectTransform rectTransform)
@@ -111,23 +138,89 @@ public class SettingsScript : MonoBehaviour
         rectTransform.anchoredPosition = targetPos;
     }
 
+    IEnumerator AnimateSingleRectTransformToTargetTextAudio(RectTransform rectTransform)
+    {
+        isTitleAnimatingBack = true;
+        Vector2 startPos = rectTransform.anchoredPosition;
+        Vector2 targetPos = new Vector2(defaultXPosition, startPos.y);
+
+        float timer = 0f;
+
+        while (timer < animationDuration)
+        {
+            timer += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, timer / animationDuration);
+            rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+        rectTransform.anchoredPosition = targetPos;
+        isTitleAnimatingBack = false;
+    }
+
+    IEnumerator UpdateTitleAndAnimateBack()
+    {
+        while (Mathf.Abs(titleRectTransform.anchoredPosition.x - targetXPosition) > positionTolerance)
+        {
+            yield return null;
+        }
+
+        switch (currentButtonClicked)
+        {
+            case "Audio":
+                Title.text = "Audio Settings";
+                break;
+            case "Graphics":
+                Title.text = "Graphics Settings";
+                break;
+            case "Controls":
+                Title.text = "Controls Settings";
+                break;
+            case "GamePlay":
+                Title.text = "Gameplay Settings";
+                break;
+        }
+
+        yield return StartCoroutine(AnimateSingleRectTransformToTargetTextAudio(titleRectTransform));
+    }
+
     public void AudioButtonClick()
     {
-        HandleAnyButtonClick();
+        if (!isTitleAnimatingBack)
+        {
+            currentButtonClicked = "Audio";
+            StartCoroutine(HandleButtonClickSequence(cameradir2));
+        }
     }
 
     public void GraphicsButtonClick()
     {
-        HandleAnyButtonClick();
+        if (!isTitleAnimatingBack)
+        {
+            currentButtonClicked = "Graphics";
+            StartCoroutine(HandleButtonClickSequence(cameradir3));
+        }
     }
 
     public void ControlsButtonClick()
     {
-        HandleAnyButtonClick();
+        if (!isTitleAnimatingBack)
+        {
+            currentButtonClicked = "Controls";
+            StartCoroutine(HandleButtonClickSequence(cameradir4));
+        }
     }
 
     public void GamePlayButtonClick()
     {
-        HandleAnyButtonClick();
+        if (!isTitleAnimatingBack)
+        {
+            currentButtonClicked = "GamePlay";
+            StartCoroutine(HandleButtonClickSequence(cameradir));
+        }
+    }
+
+    public void Update()
+    {
+        // This method is now empty as the logic has been moved to coroutines.
     }
 }
