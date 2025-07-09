@@ -11,12 +11,17 @@ public class SettingsScript : MonoBehaviour
     public Button ControlsButton;
     public Button GamePlayButton;
     public Button BackButton;
+    public Scrollbar scrollbar;
 
     public GameObject model_human;
     public PlayableDirector cameradir;
     public PlayableDirector cameradir2;
     public PlayableDirector cameradir3;
     public PlayableDirector cameradir4;
+
+    public GameObject Model_Human2;
+    public GameObject Model_Human3;
+    public GameObject Model_Human4;
 
     public PlayableDirector cameradirback;
     public PlayableDirector cameradirback2;
@@ -35,7 +40,7 @@ public class SettingsScript : MonoBehaviour
     private float targetXPosition = -2183f;
 
     private float animationDuration = 1.3f;
-    private float positionTolerance = 5f;
+    //private float positionTolerance = 5f;
 
     private bool isAnimatingUIElements = false;
     private bool isTitleAnimatingBack = false;
@@ -49,6 +54,9 @@ public class SettingsScript : MonoBehaviour
 
     void Start()
     {
+        Model_Human2.SetActive(false);
+        Model_Human3.SetActive(false);
+        Model_Human4.SetActive(false);
         BackButton.gameObject.SetActive(false);
         AudioPanel.SetActive(false);
         GraphicsPanel.SetActive(false);
@@ -67,6 +75,9 @@ public class SettingsScript : MonoBehaviour
         GamePlayButton.gameObject.SetActive(true);
 
         model_human.SetActive(true);
+        Model_Human2.SetActive(false);
+        Model_Human3.SetActive(false);
+        Model_Human4.SetActive(false);
         model_human.transform.position = new Vector3(-9.83f, 1.31f, 8.94f);
 
         audioButtonRectTransform.anchoredPosition = new Vector2(defaultXPosition, audioButtonRectTransform.anchoredPosition.y);
@@ -111,22 +122,6 @@ public class SettingsScript : MonoBehaviour
         isAnimatingUIElements = true;
         SetButtonsInteractable(false);
 
-        List<RectTransform> elementsToAnimate = new List<RectTransform>()
-        {
-            audioButtonRectTransform,
-            graphicsButtonRectTransform,
-            controlsButtonRectTransform,
-            gamePlayButtonRectTransform,
-            titleRectTransform
-        };
-
-        foreach (RectTransform rectT in elementsToAnimate)
-        {
-            StartCoroutine(AnimateSingleRectTransformToTarget(rectT));
-        }
-
-        yield return new WaitForSeconds(animationDuration);
-
         if (cameradirback != null)
         {
             cameradirback.Play();
@@ -136,37 +131,95 @@ public class SettingsScript : MonoBehaviour
             }
         }
 
+        List<RectTransform> elementsToAnimate = new List<RectTransform>()
+        {
+            audioButtonRectTransform,
+            graphicsButtonRectTransform,
+            controlsButtonRectTransform,
+            gamePlayButtonRectTransform
+        };
+
+        foreach (RectTransform rectT in elementsToAnimate)
+        {
+            StartCoroutine(AnimateSingleRectTransformToTarget(rectT));
+        }
+
+        yield return StartCoroutine(AnimateTitleToTargetAndChangeText());
+
         if (categoryCameraDirector != null)
         {
             categoryCameraDirector.Play();
         }
 
         isAnimatingUIElements = false;
+        BackButton.gameObject.SetActive(true);
+        SetButtonsInteractable(true);
+    }
+
+    IEnumerator AnimateTitleToTargetAndChangeText()
+    {
+        Vector2 startPos = titleRectTransform.anchoredPosition;
+        Vector2 targetPos = new Vector2(targetXPosition, startPos.y);
+
+        float timer = 0f;
+
+        while (timer < animationDuration)
+        {
+            timer += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, timer / animationDuration);
+            titleRectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+        titleRectTransform.anchoredPosition = targetPos;
+
+        Model_Human2.SetActive(false);
+        Model_Human3.SetActive(false);
+        Model_Human4.SetActive(false);
+        model_human.SetActive(false);
 
         switch (currentButtonClicked)
         {
             case "Audio":
                 Title.text = "Audio Settings";
+                Model_Human2.SetActive(true);
                 AudioPanel.SetActive(true);
                 break;
             case "Graphics":
                 Title.text = "Graphics Settings";
+                Model_Human3.SetActive(true);
                 GraphicsPanel.SetActive(true);
                 break;
             case "Controls":
                 Title.text = "Controls Settings";
+                Model_Human4.SetActive(true);
                 ControlsPanel.SetActive(true);
                 break;
             case "GamePlay":
                 Title.text = "Gameplay Settings";
+                model_human.SetActive(true);
                 GamePlayPanel.SetActive(true);
                 break;
         }
-        BackButton.gameObject.SetActive(true);
-        yield return StartCoroutine(AnimateSingleRectTransformToOriginal(titleRectTransform));
 
-        SetButtonsInteractable(true);
+        yield return StartCoroutine(AnimateSingleRectTransform(titleRectTransform, new Vector2(initialTitleXPosition, titleRectTransform.anchoredPosition.y)));
     }
+
+
+    IEnumerator AnimateSingleRectTransform(RectTransform rectTransform, Vector2 endPosition)
+    {
+        Vector2 startPos = rectTransform.anchoredPosition;
+        float timer = 0f;
+
+        while (timer < animationDuration)
+        {
+            timer += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, timer / animationDuration);
+            rectTransform.anchoredPosition = Vector2.Lerp(startPos, endPosition, t);
+            yield return null;
+        }
+        rectTransform.anchoredPosition = endPosition;
+    }
+
 
     IEnumerator AnimateSingleRectTransformToTarget(RectTransform rectTransform)
     {
@@ -207,6 +260,7 @@ public class SettingsScript : MonoBehaviour
         if (!isTitleAnimatingBack)
         {
             StartCoroutine(HandleBackButtonProcess());
+            scrollbar.value = 1f;
         }
     }
 
@@ -220,6 +274,11 @@ public class SettingsScript : MonoBehaviour
         ControlsPanel.SetActive(false);
         GamePlayPanel.SetActive(false);
         BackButton.gameObject.SetActive(false);
+
+        Model_Human2.SetActive(false);
+        Model_Human3.SetActive(false);
+        Model_Human4.SetActive(false);
+        model_human.SetActive(false);
 
         PlayableDirector cameraBackSpecificDirector = null;
         switch (currentButtonClicked)
@@ -247,7 +306,7 @@ public class SettingsScript : MonoBehaviour
             }
         }
 
-        yield return StartCoroutine(AnimateSingleRectTransformToOriginal(titleRectTransform));
+        yield return StartCoroutine(AnimateTitleOutAndBackInAsSettings());
 
         List<RectTransform> elementsToAnimateBack = new List<RectTransform>()
         {
@@ -264,8 +323,8 @@ public class SettingsScript : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        model_human.SetActive(true);
         cameradir.Play();
-        Title.text = "Settings";
         currentButtonClicked = "";
 
         if (cameradir != null)
@@ -279,6 +338,16 @@ public class SettingsScript : MonoBehaviour
         isTitleAnimatingBack = false;
         SetButtonsInteractable(true);
     }
+
+    IEnumerator AnimateTitleOutAndBackInAsSettings()
+    {
+        yield return StartCoroutine(AnimateSingleRectTransform(titleRectTransform, new Vector2(targetXPosition, titleRectTransform.anchoredPosition.y)));
+
+        Title.text = "Settings";
+
+        yield return StartCoroutine(AnimateSingleRectTransform(titleRectTransform, new Vector2(initialTitleXPosition, titleRectTransform.anchoredPosition.y)));
+    }
+
 
     public void AudioButtonClick()
     {
