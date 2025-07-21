@@ -30,7 +30,7 @@ Projects are grouped by language or technology:
 
 > **Note:**  
 > All projects are provided as-is and will remain in their current state.  
-> No images or videos are included in any project.
+> No videos are included in any project.
 
 ---
 
