@@ -51,6 +51,7 @@ This project is currently in the early stages of concept and narrative design. K
 ## Contact
 
 Jonatan Kovalik - jonatan.kovalik@gmail.com
+
 All my Projects in GitHub Link: https://github.com/JonatanKovalik/Projects
 
 ---
