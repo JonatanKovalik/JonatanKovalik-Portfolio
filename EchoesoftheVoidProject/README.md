@@ -50,7 +50,7 @@ This project is currently in the early stages of concept and narrative design. K
 
 ## Contact
 
-[Your Full Name] - [Your Email Address] (e.g., yourname@example.com)
-GitHub Project Link: [https://github.com/YOUR_USERNAME/EchoesOfTheVoid_GameConcept](https://github.com/YOUR_USERNAME/EchoesOfTheVoid_GameConcept) *(Please update this link)*
+Jonatan Kovalik - jonatan.kovalik@gmail.com
+All my Projects in GitHub Link: https://github.com/JonatanKovalik/Projects
 
 ---
