@@ -1,5 +1,11 @@
 # 🛠️ My Projects Portfolio
 
+![GitHub Repo size](https://img.shields.io/github/repo-size/JonatanKovalik/Projects?style=flat)
+![GitHub Top Language](https://img.shields.io/github/languages/top/JonatanKovalik/Projects?style=flat)
+![License](https://img.shields.io/github/license/JonatanKovalik/Projects?style=flat)
+![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat)
+![Looking for Collaborators](https://img.shields.io/badge/Looking%20for-Collaborators-blue.svg?style=flat)
+
 👋 **Welcome to My GitHub Portfolio!**
 
 This repository is a collection of all my programming projects so far. Each project represents a step in my journey as a self-taught developer — from my earliest experiments to more advanced applications. All code here is provided as-is, for learning and inspiration.
