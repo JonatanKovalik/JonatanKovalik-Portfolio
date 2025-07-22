@@ -4,6 +4,7 @@
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
 ![Genre](https://img.shields.io/badge/Genre-Psychological%20Horror%20%7C%20Survival-red.svg?style=flat)
 ![Status](https://img.shields.io/badge/Status-Concept%20%26%20Narrative%20Design-orange.svg?style=flat)
+**![Tools Used](https://img.shields.io/badge/Tools-%E2%9C%A8AI%20Tripo%20Studio%20%7C%20Unity%20(Concepts)%20%7C%20Design%20Tools-informational.svg?style=flat)**
 
 ---
 
@@ -22,7 +23,7 @@ This is a personal project designed to explore and plan advanced ideas in game d
 * **Immersive Psychological Horror:** Emphasizes dread, paranoia, and the slow unraveling of the protagonist's sanity.
 * **Dynamic Sanity System:** Visual and auditory hallucinations intensify as the player's sanity diminishes.
 * **Environmental Storytelling:** Uncover the manor's dark history and the truth of "The Void" through cryptic notes, journals, and hidden objects.
-* **Reality-Distorting Environments:** Blackwood Manor itself actively shifts and distorts, challenging player navigation and sense of security.
+* **Reality-Distorting Environments:** Blackwood Manor itself actively shifts and multidistort, challenging player navigation and sense of security.
 * **Stealth-Based Gameplay:** No combat; players must hide, evade, and use their environment to survive the malevolent entities.
 * **Resource Management:** Limited flashlight battery and sound recorder charge add to the tension.
 * **Interactive Sound Design:** Utilize a specialized sound recorder to detect clues and expose hidden phenomena.
