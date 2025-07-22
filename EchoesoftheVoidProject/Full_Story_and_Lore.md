@@ -1,4 +1,4 @@
-# Echoes of the Void: The Full Story (Enhanced Narrative - No Personal Connection)
+# Echoes of the Void: The Full Story
 
 ---
 
