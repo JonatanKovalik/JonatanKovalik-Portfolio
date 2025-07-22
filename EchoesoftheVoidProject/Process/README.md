@@ -2,7 +2,7 @@
 
 ![Process Stage](https://img.shields.io/badge/Process%20Stage-Ongoing%20Documentation-purple.svg?style=flat)
 ![Focus](https://img.shields.io/badge/Focus-Narrative%20%7C%20Concept%20%7C%20Design-yellow.svg?style=flat)
-![Tools Used](https://img.shields.io/badge/Tools-NovelAI%20%7C%20Meshy%20%7C%20Unity%20(Concepts)-informational.svg?style=flat)
+![Tools Used](https://img.shields.io/badge/Tools-Unity%20(Concepts)%20%7C%20Design%20Tools-informational.svg?style=flat)
 ![License](https://img.shields.io/github/license/JonatanKovalik/Projects?style=flat)
 
 ---
@@ -20,15 +20,9 @@ This folder is organized to reflect different aspects of the game's development 
 * **`GDD_Docs/` (Game Design Document & Narrative):**
     * Contains conceptual documents, narrative outlines, lore expansions, and detailed design specifications for game mechanics.
     * Example files: `Initial_Concept_Doc.md`, `Game_Design_Document_Outline.md`, `Mechanics_Breakdown.md`, `Lore_Expansions.md`.
-* **`AI_Narrative_Prompts/`:**
-    * Text files or screenshots of prompts given to AI tools (e.g., NovelAI) to generate narrative content, dialogue, or lore.
-    * Demonstrates prompt engineering skills.
-* **`AI_Generated_Content/`:**
-    * Raw output from AI tools based on the provided prompts.
-    * Shows the initial "raw material" provided by the AI before refinement.
-* **`AI_Content_Refinements/`:**
-    * Edited and refined versions of the AI-generated content, showcasing the human iteration and polish applied.
-    * Highlights the creative input and decision-making beyond AI generation.
+* **`Narrative_Development/`:**
+    * Documents the evolution of the game's story, dialogue, and lore, including content developed through creative collaboration (e.g., discussions with AI assistants).
+    * Example files: `Full_Story_and_Lore.md` (main narrative document), `Character_Backstories.md`, `Dialogue_Drafts.md`.
 * **`Concept_Art/`:**
     * Early sketches, illustrations, mood boards, and visual ideas for characters, environments, and entities.
     * Organized into subfolders: `Character_Sketches/`, `Environment_Concepts/`, `Enemy_Concepts/`.
