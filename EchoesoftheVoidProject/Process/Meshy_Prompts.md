@@ -1,4 +1,4 @@
-# 🤖 Meshy AI Character Prompts for "Echoes of the Void" 🎨
+# 🤖 Character Prompts for "Echoes of the Void" 🎨
 
 This document details the specific Meshy AI prompts used for generating 3D models and textures for the key characters and entities within the "Echoes of the Void" game project. These prompts are crafted to align with the game's psychological horror and survival themes, aiming for unsettling and immersive visual elements.
 
