@@ -1,4 +1,4 @@
-ת# 👻 Echoes of the Void - Unity Project Setup & Development Guide 🛠️
+# 👻 Echoes of the Void - Unity Project Setup & Development Guide 🛠️
 
 ![GitHub Repo size](https://img.shields.io/github/repo-size/JonatanKovalik/Projects?style=flat)
 ![GitHub Top Language](https://img.shields.io/github/languages/top/JonatanKovalik/Projects?style=flat)
