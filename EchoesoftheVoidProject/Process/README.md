@@ -23,6 +23,9 @@ This folder is organized to reflect different aspects of the game's development 
 * **`Narrative_Development/`:**
     * Documents the evolution of the game's story, dialogue, and lore, including content developed through creative collaboration (e.g., discussions with AI assistants).
     * Example files: `Full_Story_and_Lore.md` (main narrative document), `Character_Backstories.md`, `Dialogue_Drafts.md`.
+* **`Meshy_Prompts/` (AI Asset Generation Prompts):**
+    * Contains the detailed AI prompts used for generating 3D models, textures, and animations for game characters and assets.
+    * [**View All Meshy Prompts Here**](Meshy_Prompts.md)
 * **`Concept_Art/`:**
     * Early sketches, illustrations, mood boards, and visual ideas for characters, environments, and entities.
     * Organized into subfolders: `Character_Sketches/`, `Environment_Concepts/`, `Enemy_Concepts/`.
