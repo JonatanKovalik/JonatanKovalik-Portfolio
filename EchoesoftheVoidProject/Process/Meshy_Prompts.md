@@ -54,7 +54,7 @@ A more grounded, but still terrifying, entity – perhaps a tormented spirit or 
 
 ---
 
-## 👧 Illusory Manifestation: The Child (unnamed)
+## 👧 Illusory Manifestation: Alice (The Child)
 
 This character appears as a fragmented memory or illusion, her appearance subtly unsettling or incomplete, directly using the `unnamed (3).png` model. She is a manifestation of the manor's past tragedies and the Void's influence.
 
