@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 using static NewGameSettingsInvestigator;
 
 public class CoreGameplaySettings : MonoBehaviour
