@@ -8,15 +8,17 @@ public class ButtonFunction : MonoBehaviour
     public GameObject panelblack;
     public GameObject panelexit;
     public static bool movebuttonandimage = false;
+    public static bool startnewgame = false;
+    public static bool loadgame = false;
 
     public void startnewgamefunction()
     {
-        movebuttonandimage = true;
+        startnewgame = true;
     }
 
     public void loadgamefunction()
     {
-        movebuttonandimage = true;
+        loadgame = true;
     }
     public void optionsfunction()
     {
