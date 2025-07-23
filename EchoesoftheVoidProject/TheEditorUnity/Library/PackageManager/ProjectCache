@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638887839481596228
+      ticks: 638888583675595483
     m_Hash: 2922184236
   m_LockFileStatus:
     m_FilePath: D:/Programing/Projects/EchoesoftheVoidProject/TheEditorUnity/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638887839481627136
+      ticks: 638888583675622966
     m_Hash: 143050687
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
