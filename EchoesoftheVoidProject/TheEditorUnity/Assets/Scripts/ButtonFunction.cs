@@ -7,13 +7,23 @@ public class ButtonFunction : MonoBehaviour
 
     public GameObject panelblack;
     public GameObject panelexit;
+    public GameObject newgamesettings;
     public static bool movebuttonandimage = false;
     public static bool startnewgame = false;
     public static bool loadgame = false;
 
     public void startnewgamefunction()
     {
+        try
+        {
+            PlayerPrefs.DeleteAll();
+        }
+        catch
+        {
+            Debug.LogError("Error deleting PlayerPrefs");
+        }
         startnewgame = true;
+        newgamesettings.SetActive(true);
     }
 
     public void loadgamefunction()
@@ -33,6 +43,7 @@ public class ButtonFunction : MonoBehaviour
     {
         panelblack.SetActive(false);
         panelexit.SetActive(false);
+        newgamesettings.SetActive(false);
     }
 
 }
