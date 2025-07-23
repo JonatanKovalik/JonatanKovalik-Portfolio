@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingScreenSettings : MonoBehaviour
@@ -33,7 +34,7 @@ public class LoadingScreenSettings : MonoBehaviour
     }
     private IEnumerator Loading()
     {
-        while(stage != 5)//change!!
+        while(stage != 5)
         {
             if (stage == 0)
             {
@@ -134,6 +135,8 @@ public class LoadingScreenSettings : MonoBehaviour
                     stage++;
                 }
             }
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene("MainMenuScene");
         }
     }
 
