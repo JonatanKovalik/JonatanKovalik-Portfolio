@@ -11,6 +11,9 @@ public class ButtonFunction : MonoBehaviour
     public static bool movebuttonandimage = false;
     public static bool startnewgame = false;
     public static bool loadgame = false;
+    public Canvas canvas;
+
+    public static bool options = false;
 
     public void startnewgamefunction()
     {
@@ -24,6 +27,7 @@ public class ButtonFunction : MonoBehaviour
         }
         startnewgame = true;
         newgamesettings.SetActive(true);
+        canvas.enabled = true;
     }
 
     public void loadgamefunction()
@@ -44,6 +48,7 @@ public class ButtonFunction : MonoBehaviour
         panelblack.SetActive(false);
         panelexit.SetActive(false);
         newgamesettings.SetActive(false);
+        canvas.enabled = true;
     }
 
 }

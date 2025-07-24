@@ -12,6 +12,9 @@ public class VisualSettingsStartNewGame : MonoBehaviour
     public Slider Slider;
     public Button Subtitles;
     private bool Subtitlescheck = false;
+    public Camera Camera;
+    private bool check2 = false;
+    public Canvas canvas;
 
     private void Update()
     {
@@ -64,6 +67,19 @@ public class VisualSettingsStartNewGame : MonoBehaviour
             }
         }
         Debug.Log("The player finish all new game settings");
+        if (check2 == false)
+        {
+            canvas.enabled = false;
+            Animator animatorcamera = Camera.GetComponent<Animator>();
+            animatorcamera.enabled = true;
+            StartCoroutine(loadsceneandwaitanimationend());
+            check2 = true;
+        }
+    }
+
+    private IEnumerator loadsceneandwaitanimationend()
+    {
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game");
     }
 }

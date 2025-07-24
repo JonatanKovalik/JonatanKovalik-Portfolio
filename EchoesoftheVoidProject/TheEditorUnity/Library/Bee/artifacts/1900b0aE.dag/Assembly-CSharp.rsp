@@ -361,6 +361,8 @@
 "Assets/Scripts/LoadingScreenSettings.cs"
 "Assets/Scripts/NewGameSettingsInvestigator.cs"
 "Assets/Scripts/NewGameSettingsStarting.cs"
+"Assets/Scripts/OptionsAnimationLine.cs"
+"Assets/Scripts/PanelsAnimationOpenOptions.cs"
 "Assets/Scripts/VisualSettingsStartNewGame.cs"
 -langversion:9.0
 /deterministic

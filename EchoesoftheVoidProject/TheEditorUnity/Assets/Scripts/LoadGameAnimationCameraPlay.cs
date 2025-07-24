@@ -9,16 +9,17 @@ public class LoadGameAnimationCameraPlay : MonoBehaviour
 {
     public Camera Camera;
     private bool check = false;
+    public Canvas canvas;
 
     void Update()
     {
         if(loadgame == true && check == false)
         {
+            canvas.enabled = false;
             Animator animatorcamera = Camera.GetComponent<Animator>();
             animatorcamera.enabled = true;
             StartCoroutine(loadsceneandwaitanimationend());
             check = true;
-            
         }
     }
     private IEnumerator loadsceneandwaitanimationend()

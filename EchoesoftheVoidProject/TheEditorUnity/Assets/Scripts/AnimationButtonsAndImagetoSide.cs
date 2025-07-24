@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,14 @@ public class AnimationButtonsAndImagetoSide : MonoBehaviour
     public Button loadgame;
     public Button options;
     public Button exitgame;
+    public GameObject blackpanel;
     public RawImage logo;
+    public Canvas canvas;
+    public GameObject panel;
     private bool check;
+
+
+    public static bool options2 = false;
 
     private void Update()
     {
@@ -24,7 +31,9 @@ public class AnimationButtonsAndImagetoSide : MonoBehaviour
 
     private void Start()
     {
+        canvas.enabled = false;
         check = false;
+        panel.SetActive(false);
     }
 
     public IEnumerator animations()
@@ -64,5 +73,24 @@ public class AnimationButtonsAndImagetoSide : MonoBehaviour
         loadgame.GetComponent<RectTransform>().anchoredPosition = endPosLoadGame;
         options.GetComponent<RectTransform>().anchoredPosition = endPosOptions;
         exitgame.GetComponent<RectTransform>().anchoredPosition = endPosExitGame;
+        canvas.enabled = true;
+        panel.SetActive(true);
+        options2 = true;
+        Debug.Log("Animation completed");
+        options2 = true;
+        OptionsAnimationLine.check2 = false;
+    }
+
+    public void exitpanel()
+    {
+        panel.SetActive(false);
+        startnewgame.GetComponent<RectTransform>().anchoredPosition = new Vector2(-555, 70.74841f);
+        loadgame.GetComponent<RectTransform>().anchoredPosition = new Vector2(-555, -45.75895f);
+        options.GetComponent<RectTransform>().anchoredPosition = new Vector2(-555, -158.5871f);
+        exitgame.GetComponent<RectTransform>().anchoredPosition = new Vector2(-555, -280);
+        logo.rectTransform.anchoredPosition = new Vector2(-555, 276.2949f);
+        check = false;
+        ButtonFunction.movebuttonandimage = false;
+        blackpanel.GetComponent<Image>().color = new Color32(70, 70, 70, 255);
     }
 }
