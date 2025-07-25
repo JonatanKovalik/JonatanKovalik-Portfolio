@@ -356,13 +356,16 @@
 "Assets/Scripts/AnimationButtonsAndImagetoSide.cs"
 "Assets/Scripts/ButtonFunction.cs"
 "Assets/Scripts/CoreGameplaySettings.cs"
+"Assets/Scripts/DisplaySettingsData.cs"
 "Assets/Scripts/Exitfromthegamescript.cs"
+"Assets/Scripts/GraphicsSettings.cs"
 "Assets/Scripts/LoadGameAnimationCameraPlay.cs"
 "Assets/Scripts/LoadingScreenSettings.cs"
 "Assets/Scripts/NewGameSettingsInvestigator.cs"
 "Assets/Scripts/NewGameSettingsStarting.cs"
 "Assets/Scripts/OptionsAnimationLine.cs"
 "Assets/Scripts/PanelsAnimationOpenOptions.cs"
+"Assets/Scripts/ResolutionSetting.cs"
 "Assets/Scripts/VisualSettingsStartNewGame.cs"
 -langversion:9.0
 /deterministic

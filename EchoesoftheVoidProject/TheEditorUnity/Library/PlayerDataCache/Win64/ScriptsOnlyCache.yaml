@@ -4,11 +4,16 @@ ScriptsOnlyBuild:
     - AnimationButtonsAndImagetoSide
     - ButtonFunction
     - CoreGameplaySettings
+    - DisplaySettingsData
     - Exitfromthegamescript
+    - GraphicsSettings
     - LoadGameAnimationCameraPlay
     - LoadingScreenSettings
     - NewGameSettingsInvestigator
     - NewGameSettingsStarting
+    - OptionsAnimationLine
+    - PanelsAnimationOpenOptions
+    - ResolutionSetting
     - VisualSettingsStartNewGame
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -20,8 +25,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -68,8 +75,29 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: OptionsAnimationLine
+    methodName: ControlButtonClick
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: buttonclickcusomsettings
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionsAnimationLine
+    methodName: AccessibilityButtonClick
+  - assembly: Assembly-CSharp
     fullTypeName: Exitfromthegamescript
     methodName: yesbuttonclick
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionsAnimationLine
+    methodName: DisplayButtonClick
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: Onvluechange
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: Onvluechange
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: resultionchanged
   - assembly: Assembly-CSharp
     fullTypeName: ButtonFunction
     methodName: startnewgamefunction
@@ -92,14 +120,32 @@ ScriptsOnlyBuild:
     fullTypeName: ButtonFunction
     methodName: optionsfunction
   - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: Onvluechange
+  - assembly: Assembly-CSharp
     fullTypeName: Exitfromthegamescript
     methodName: nobuttonclick
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: Onvluechange
+  - assembly: Assembly-CSharp
+    fullTypeName: AnimationButtonsAndImagetoSide
+    methodName: exitpanel
   - assembly: Assembly-CSharp
     fullTypeName: VisualSettingsStartNewGame
     methodName: finishbuttonclick
   - assembly: Assembly-CSharp
     fullTypeName: ButtonFunction
     methodName: loadgamefunction
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: Onvluechange
+  - assembly: Assembly-CSharp
+    fullTypeName: DisplaySettingsData
+    methodName: GraphicsChangedfun
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionsAnimationLine
+    methodName: AudioButtonClick
   - assembly: Assembly-CSharp
     fullTypeName: NewGameSettingsStarting
     methodName: buttonnexttoCorestageclick
@@ -179,19 +225,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2292}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 5274}
+      Script: {instanceID: 5278}
     - Class: 114
-      Script: {instanceID: 5580}
+      Script: {instanceID: 5584}
     - Class: 114
-      Script: {instanceID: 6060}
+      Script: {instanceID: 6064}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -242,51 +288,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 1952}
+      Script: {instanceID: 1954}
     - Class: 114
-      Script: {instanceID: 2292}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3204}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3838}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 4154}
+      Script: {instanceID: 3842}
     - Class: 114
-      Script: {instanceID: 4172}
+      Script: {instanceID: 4158}
     - Class: 114
-      Script: {instanceID: 4616}
+      Script: {instanceID: 4176}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4620}
     - Class: 114
-      Script: {instanceID: 4952}
+      Script: {instanceID: 4908}
     - Class: 114
-      Script: {instanceID: 5274}
+      Script: {instanceID: 4956}
     - Class: 114
-      Script: {instanceID: 5580}
+      Script: {instanceID: 5278}
     - Class: 114
-      Script: {instanceID: 6060}
+      Script: {instanceID: 5584}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 6770}
+      Script: {instanceID: 6072}
     - Class: 114
-      Script: {instanceID: 6826}
+      Script: {instanceID: 6672}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 6776}
     - Class: 114
-      Script: {instanceID: 7186}
+      Script: {instanceID: 6832}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7114}
+    - Class: 114
+      Script: {instanceID: 7192}
+    - Class: 114
+      Script: {instanceID: 7402}
+    - Class: 114
+      Script: {instanceID: 35792}
+    - Class: 114
+      Script: {instanceID: 38214}
+    - Class: 114
+      Script: {instanceID: 40662}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -366,7 +422,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 3c41e5cbfec60d55b6b7886c35f987b7
+      Hash: 824441015df1094ea510cc7e9b1abc7b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LoadGameAnimationCameraPlay
@@ -592,6 +648,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSelectMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1077f0de85877d6a1de9c85f4f2417e0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PanelsAnimationOpenOptions
   - hash:
       serializedVersion: 2
       Hash: 5b8b7230ad968399f6726aa1269dcdcb
@@ -1032,6 +1094,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 933462ee776278ca1c9cb7fedc3c8db3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OptionsAnimationLine
+  - hash:
+      serializedVersion: 2
       Hash: 6a0b5b415c00f783202fd1ae2d556cb2
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1050,7 +1118,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9941c4c11d01ba66e3b50c091b24ef68
+      Hash: 31133767ec9f9b22bf5bfbe3f06a2139
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: VisualSettingsStartNewGame
@@ -1104,7 +1172,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 40e8f7948ecc2ff8ed7a62f3aba11154
+      Hash: 4e05330b14d538910e39405de094af8b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonFunction
@@ -1128,7 +1196,7 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
-      Hash: d63e48603a0061f60e466d8445ecdcf0
+      Hash: 7d6b92569962ebbbdd1dd9c8f284277b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AnimationButtonsAndImagetoSide
@@ -1186,6 +1254,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f3743adeddb01f7c470f476f63d3914e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DisplaySettingsData
+  - hash:
+      serializedVersion: 2
+      Hash: a68df2b5aafbf7476240e3c9678a9411
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ResolutionSetting
+  - hash:
+      serializedVersion: 2
+      Hash: 97e5d5b1b273c86a59f63e341501de30
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GraphicsSettings
   platform: 19
   scenePathNames:
   - Assets/Scenes/LoadingScreenGame.unity
@@ -1193,4 +1279,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LoadingDataSaveGameScreen.unity
   - Assets/Scenes/Game.unity
   playerPath: D:/Programing/Projects/EchoesoftheVoidProject/VersionsGame/Version
-    1.52.8/x64/Echoesof The Void.exe
+    1.56.32/x64/Echoesof The Void.exe
