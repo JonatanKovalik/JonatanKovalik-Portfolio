@@ -18,28 +18,33 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Grab the Paper Game** (Java / Processing)
     An arcade-style game featuring multiple levels, score tracking, an in-game shop, achievements, and dynamic music logic.
-  
+
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
 * **Echoes of the Void Project** (Unity / C#)
-    [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
-  
+    An atmospheric 3D survival horror game prototype built with Unity, exploring environmental storytelling and resource management.
+
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
 
 ### **🚀 C# Application Projects**
 
 * **PasswordChecker Project**
-    [Add a brief, compelling description of what PixelForge is - e.g., a pixel art editor, an image processing tool, etc.]
-  
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
-  
-### **⚙️ C++ System/Game Engine Projects**
+    A simple console application developed in C# to validate user passwords based on predefined criteria, demonstrating basic input handling and conditional logic.
 
-* **Custom Game Engine + First Game Project**
-    [Add a brief, compelling description of your C++ engine and the game built with it - e.g., focuses on rendering, physics, a specific game type.]
-  
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-Learning-Fundamentals)
-      
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
+    
+* **PixelForge Project** (C#)
+    A simple desktop pixel art editor application built with C# and .NET, demonstrating fundamental image manipulation and GUI development.
+
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/PixelForge-CSharpImageEditor)
+
+### **⚙️ C++ Console Applications**
+
+* **ID Generator & Math Tool**
+    A console application developed in C++ that generates random IDs and provides basic mathematical operations (addition with multiple inputs, etc.), showcasing fundamental C++ concepts.
+
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-IDGenerator-MathTool)
+
 ### **🐍 Python Utility & Application Projects**
 
 * **Python Scripts & Apps**
