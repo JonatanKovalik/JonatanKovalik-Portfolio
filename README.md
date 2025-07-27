@@ -44,6 +44,7 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Python Scripts & Apps**
     This repository contains various Python scripts and small applications, including number converters, GUI experiments, and more, showcasing my versatility in Python.
+
     * [**View Python Projects on GitHub**](https://github.com/JonatanKovalik/Python-UtilityScripts)
 
 ### **☕ Java Fundamentals & Application Projects**
