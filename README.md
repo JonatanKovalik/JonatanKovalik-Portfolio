@@ -18,22 +18,26 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Grab the Paper Game** (Java / Processing)
     An arcade-style game featuring multiple levels, score tracking, an in-game shop, achievements, and dynamic music logic.
+  
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
 * **Echoes of the Void Project** (Unity / C#)
     [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
+  
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
 
 ### **🚀 C# Application Projects**
 
 * **PixelForge Project**
     [Add a brief, compelling description of what PixelForge is - e.g., a pixel art editor, an image processing tool, etc.]
+  
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
     * 
 ### **⚙️ C++ System/Game Engine Projects**
 
 * **Custom Game Engine + First Game Project**
     [Add a brief, compelling description of your C++ engine and the game built with it - e.g., focuses on rendering, physics, a specific game type.]
+  
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-Learning-Fundamentals)
     * 
 ### **🐍 Python Utility & Application Projects**
