@@ -22,7 +22,7 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Echoes Of Chronos Project** (Unity / C#)
     [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfChronosProject) *(UPDATE THIS LINK)*
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
 
 * **Echoes of the Void Project** (Unity / C#)
     [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
