@@ -20,13 +20,9 @@ Below are some of my key projects, categorized by their primary technology or do
     An arcade-style game featuring multiple levels, score tracking, an in-game shop, achievements, and dynamic music logic.
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
-* **Echoes Of Chronos Project** (Unity / C#)
-    [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
-
 * **Echoes of the Void Project** (Unity / C#)
     [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesoftheVoidProject) *(UPDATE THIS LINK)*
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
 
 ### **🚀 C# Application Projects**
 
