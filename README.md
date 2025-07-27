@@ -78,8 +78,6 @@ I'm genuinely interested in connecting with other developers who are passionate 
 
 **Contact me:**
 * Email: jonatan.kovalik@gmail.com
-* [Your LinkedIn Profile URL (Optional)]
-
 ---
 
 ## ⚖️ License
