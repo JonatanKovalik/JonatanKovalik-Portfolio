@@ -38,7 +38,7 @@ Below are some of my key projects, categorized by their primary technology or do
 * **ID Generator & Math Tool**
     A console application developed in C++ that generates random IDs and provides basic mathematical operations (addition with multiple inputs, etc.), showcasing fundamental C++ concepts.
 
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-IDGenerator-MathTool)
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-Learning-Fundamentals)
 
 ### **🐍 Python Utility & Application Projects**
 
