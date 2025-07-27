@@ -18,7 +18,7 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Grab the Paper Game** (Java / Processing)
     An arcade-style game featuring multiple levels, score tracking, an in-game shop, achievements, and dynamic music logic.
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame) *(UPDATE THIS LINK to the actual new repo URL)*
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
 * **Echoes Of Chronos Project** (Unity / C#)
     [Add a brief, compelling description of this game project - what's its genre, main mechanics, or goal?]
