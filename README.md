@@ -32,11 +32,6 @@ Below are some of my key projects, categorized by their primary technology or do
     A simple console application developed in C# to validate user passwords based on predefined criteria, demonstrating basic input handling and conditional logic.
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
-    
-* **PixelForge Project** (C#)
-    A simple desktop pixel art editor application built with C# and .NET, demonstrating fundamental image manipulation and GUI development.
-
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/PixelForge-CSharpImageEditor)
 
 ### **⚙️ C++ Console Applications**
 
