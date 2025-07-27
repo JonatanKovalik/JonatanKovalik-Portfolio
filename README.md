@@ -33,10 +33,15 @@ Below are some of my key projects, categorized by their primary technology or do
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
 
-### **⚙️ C++ Console Applications**
+* **PixelForge Project** (C#)
+    A simple desktop pixel art editor application built with C# and .NET, demonstrating fundamental image manipulation and GUI development.
+
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/PixelForge-CSharpImageEditor)
+
+### **⚙️ C++ Learning & Console Projects**
 
 * **C++ Learning & Fundamentals**
-    This repository contains various C++ learning exercises and small projects, demonstrating fundamental programming concepts and basic problem-solving skills in C++.
+    This repository contains various C++ learning exercises and small console applications, including an ID generator and a basic math tool, demonstrating fundamental C++ concepts.
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-Learning-Fundamentals)
 
@@ -77,7 +82,8 @@ Below are some of my key projects, categorized by their primary technology or do
 I'm genuinely interested in connecting with other developers who are passionate about programming and want to join me on new (free, non-commercial) projects, learn together, or simply share ideas. If you're looking to gain experience or practice with real-world code, feel free to reach out!
 
 **Contact me:**
-📧 [jonatan.kovalik@gmail.com](mailto:jonatan.kovalik@gmail.com)
+* Email: jonatan.kovalik@gmail.com
+* [Your LinkedIn Profile URL (Optional)]
 
 ---
 
