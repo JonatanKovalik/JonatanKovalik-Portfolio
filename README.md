@@ -58,7 +58,8 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Web Development Projects**
     A collection of my HTML, CSS, and JavaScript projects, including simple websites, style experiments, and interactive UI elements.
-    * [**View Web Projects on GitHub**](https://github.com/JonatanKovalik/Web-Development-Experiments) *(UPDATE THIS LINK - if these are smaller, you can put them in one "Web Experiments" repo)*
+
+    * [**View Web Projects on GitHub**](https://github.com/JonatanKovalik/Web-InteractiveUI-Demos)
 
 ---
 
