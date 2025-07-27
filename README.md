@@ -28,7 +28,7 @@ Below are some of my key projects, categorized by their primary technology or do
 
 ### **🚀 C# Application Projects**
 
-* **PixelForge Project**
+* **PasswordChecker Project**
     [Add a brief, compelling description of what PixelForge is - e.g., a pixel art editor, an image processing tool, etc.]
   
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/CSharp-PasswordChecker)
