@@ -35,8 +35,8 @@ Below are some of my key projects, categorized by their primary technology or do
 
 ### **⚙️ C++ Console Applications**
 
-* **ID Generator & Math Tool**
-    A console application developed in C++ that generates random IDs and provides basic mathematical operations (addition with multiple inputs, etc.), showcasing fundamental C++ concepts.
+* **C++ Learning & Fundamentals**
+    This repository contains various C++ learning exercises and small projects, demonstrating fundamental programming concepts and basic problem-solving skills in C++.
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Cpp-Learning-Fundamentals)
 
