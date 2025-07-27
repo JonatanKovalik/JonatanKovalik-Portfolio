@@ -50,7 +50,8 @@ Below are some of my key projects, categorized by their primary technology or do
 
 * **Java Practice & Small Applications**
     This repository holds various practice projects and small applications, exploring Java fundamentals and Object-Oriented Programming (OOP) concepts.
-    * [**View Java Projects on GitHub**](https://github.com/JonatanKovalik/Java-Learning-Exercises) *(UPDATE THIS LINK - if these are small, you can put them in one "Java Exercises" repo)*
+
+    * [**View Java Projects on GitHub**](https://github.com/JonatanKovalik/Java-LearningExercises)
 
 ### **🌐 Web Development Experiments**
 
