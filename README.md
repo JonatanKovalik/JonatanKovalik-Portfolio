@@ -21,10 +21,10 @@ Below are some of my key projects, categorized by their primary technology or do
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
-* **Echoes of the Void Project** (Unity / C#)
-    An atmospheric 3D survival horror game prototype built with Unity, exploring environmental storytelling and resource management.
+* **Echoes of Aetherion Project** (Unity / C#)
+    A fantasy-themed open-world 3D survival game prototype built with Unity, combining exploration, real-time combat, and deep narrative.
 
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/EchoesOfTheVoid-UnityGame)
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Unity-EchoesOfAetherion)
 
 ### **🚀 C# Application Projects**
 
