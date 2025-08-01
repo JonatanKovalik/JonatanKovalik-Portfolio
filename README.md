@@ -21,11 +21,6 @@ Below are some of my key projects, categorized by their primary technology or do
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
-* **Echoes of Aetherion Project** (Unity / C#)
-    A fantasy-themed open-world 3D survival game prototype built with Unity, combining exploration, real-time combat, and deep narrative.
-
-    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Unity-EchoesOfAetherion)
-
 ### **🚀 C# Application Projects**
 
 * **PasswordChecker Project**
