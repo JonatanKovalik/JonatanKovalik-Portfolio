@@ -20,11 +20,6 @@ Below are some of my key projects, categorized by their primary technology or do
     An arcade-style game featuring multiple levels, score tracking, an in-game shop, achievements, and dynamic music logic.
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
-    
-* **WarQuest** (Unity / C#)  
-  A tactical open-world single-player game combining intense combat, exploration, dynamic NPC factions, and a rich story-driven campaign.
-
-  * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Unity-WarQuest)
 
 ### **🚀 C# Application Projects**
 
