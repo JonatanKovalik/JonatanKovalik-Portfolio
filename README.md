@@ -21,6 +21,11 @@ Below are some of my key projects, categorized by their primary technology or do
 
     * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/GrabThePaperGame-ProcessingJava)
 
+* **Fragments of Aetherion** (Unity 6 / C#)
+    A solo journey into a shattered world, brought to life by a single developer's vision in Unity 6. The game features an expansive universe, strategic combat, and a deep lore system.
+
+    * [**View Full Project on GitHub**](https://github.com/JonatanKovalik/Fragments-of-Aetherion)
+
 ### **🚀 C# Application Projects**
 
 * **PasswordChecker Project**
